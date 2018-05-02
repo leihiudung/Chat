@@ -30,6 +30,10 @@
 //    [self.room addDelegate:self delegateQueue:self.app.queue];
     _roomArray = [NSMutableArray array];
     self.app.roomDelegate = self;
+    NSString *version = [UIDevice currentDevice].systemVersion;
+    if (version.floatValue < 11.0) {
+        [self setAutomaticallyAdjustsScrollViewInsets:NO];
+    }
 }
 
 - (void)viewDidLoad {
@@ -40,6 +44,15 @@
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"li"];
     [self getRoomList];
     
+    UIBarButtonItem *temporaryBarButtonItem = [[UIBarButtonItem alloc] init];
+    temporaryBarButtonItem.title = @"返回";
+    self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
+    
+    // 下拉刷新
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc]init];
+    [refreshControl addTarget:self action:@selector(refreshClick:) forControlEvents:UIControlEventValueChanged];
+//    [self.tableView addSubview:refreshControl];
+    [refreshControl beginRefreshing];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -48,6 +61,15 @@
         [self.tableView reloadData];
 //        _needFresh = YES;
 //    }
+}
+
+- (void)refreshClick:(UIRefreshControl *)refreshControl {
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self.tableView reloadData];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

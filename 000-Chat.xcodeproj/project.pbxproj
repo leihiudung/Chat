@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3321FEFB2099565B00FE5516 /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3321FEFA2099565B00FE5516 /* AddFriendViewController.swift */; };
 		3321FEFD20997C5500FE5516 /* AddRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3321FEFC20997C5500FE5516 /* AddRoomViewController.swift */; };
+		3321FEFF20999DB200FE5516 /* back.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3321FEFE20999D7F00FE5516 /* back.jpeg */; };
+		3321FF022099A1FE00FE5516 /* CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3321FF012099A1FE00FE5516 /* CustomNavigationController.m */; };
 		3347890920931ECE000EDE05 /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3347890820931ECE000EDE05 /* ChatCell.m */; };
 		334805022093F9C800C867F4 /* ToolsMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 334805012093F9C800C867F4 /* ToolsMethod.m */; };
 		3348050420940F4700C867F4 /* crash.wav in Resources */ = {isa = PBXBuildFile; fileRef = 334805032094014F00C867F4 /* crash.wav */; };
@@ -62,6 +64,9 @@
 /* Begin PBXFileReference section */
 		3321FEFA2099565B00FE5516 /* AddFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
 		3321FEFC20997C5500FE5516 /* AddRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRoomViewController.swift; sourceTree = "<group>"; };
+		3321FEFE20999D7F00FE5516 /* back.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back.jpeg; sourceTree = "<group>"; };
+		3321FF002099A1FE00FE5516 /* CustomNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomNavigationController.h; sourceTree = "<group>"; };
+		3321FF012099A1FE00FE5516 /* CustomNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationController.m; sourceTree = "<group>"; };
 		3347890720931ECE000EDE05 /* ChatCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatCell.h; sourceTree = "<group>"; };
 		3347890820931ECE000EDE05 /* ChatCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatCell.m; sourceTree = "<group>"; };
 		334805002093F9C800C867F4 /* ToolsMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolsMethod.h; sourceTree = "<group>"; };
@@ -185,6 +190,8 @@
 				3321FEFA2099565B00FE5516 /* AddFriendViewController.swift */,
 				3321FEFC20997C5500FE5516 /* AddRoomViewController.swift */,
 				3359F0EE2091CC03009578F1 /* ChatViewController.h */,
+				3321FF002099A1FE00FE5516 /* CustomNavigationController.h */,
+				3321FF012099A1FE00FE5516 /* CustomNavigationController.m */,
 				334805052094272700C867F4 /* ChatViewController.m */,
 				3363429B20954A9A002EB9E5 /* EmojiView.h */,
 				3363429C20954A9A002EB9E5 /* EmojiView.m */,
@@ -218,6 +225,7 @@
 				3359F0B620917EA7009578F1 /* roster.gif */,
 				3359F0B220917EA1009578F1 /* zhan.gif */,
 				3359F0B320917EA1009578F1 /* zhe.gif */,
+				3321FEFE20999D7F00FE5516 /* back.jpeg */,
 				33C67AF72090C6AC006BFA33 /* RoomViewController.h */,
 				33C67AF82090C6AC006BFA33 /* RoomViewController.m */,
 				3363429E209555BF002EB9E5 /* Emoticons.bundle */,
@@ -353,6 +361,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3321FEFF20999DB200FE5516 /* back.jpeg in Resources */,
 				3363429F209555D5002EB9E5 /* Emoticons.bundle in Resources */,
 				3348050420940F4700C867F4 /* crash.wav in Resources */,
 				3359F0B820917ECD009578F1 /* minus.gif in Resources */,
@@ -497,6 +506,7 @@
 				336342A52095602C002EB9E5 /* EmojiPackager.m in Sources */,
 				33C67AD4209074DB006BFA33 /* ViewController.m in Sources */,
 				336342AE209591DD002EB9E5 /* EmojiViewCollectionCell.m in Sources */,
+				3321FF022099A1FE00FE5516 /* CustomNavigationController.m in Sources */,
 				3359F0AC20915BC4009578F1 /* RosterHeader.m in Sources */,
 				334805062094272700C867F4 /* ChatViewController.m in Sources */,
 				33C67AF92090C6AC006BFA33 /* RoomViewController.m in Sources */,

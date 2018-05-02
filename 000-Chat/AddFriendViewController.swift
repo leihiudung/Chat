@@ -25,6 +25,7 @@ class AddFriendViewController: UIViewController {
         roster.activate(app.stream)
         roster.addDelegate(self, delegateQueue: app.queue)
         // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
 
     override func didReceiveMemoryWarning() {

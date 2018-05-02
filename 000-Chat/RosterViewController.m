@@ -10,6 +10,7 @@
 #import "RosterHeaderView.h"
 #import "AppDelegate.h"
 #import "ChatViewController.h"
+
 @interface RosterViewController () <UITableViewDataSource, UITableViewDelegate, XMPPRosterDelegate, RosterDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *titleArray;
@@ -29,7 +30,7 @@
 
 - (void)loadView{
     [super loadView];
-    self.titleArray = @[@"在线好友", @"离线好友", @"尝试添加的好友"];
+    self.titleArray = @[@"我的好友", @"离线好友", @"潜在好友"];
     
 #ifdef __IPHONE_11_0
     
@@ -55,6 +56,11 @@
     self.offlineArray = [NSMutableArray array];
     self.tryRosterArray = [NSMutableArray array];
     [self.roster fetchRoster];
+    
+    
+//    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"back.jpeg"] style:UIBarButtonItemStylePlain target:self action:nil];
+    
+    
 }
 
 // 创建并初始化XMPPRoster
@@ -258,6 +264,7 @@
 
     });
 }
+
 
 - (void)dealloc{
     NSLog(@"done");

@@ -341,7 +341,7 @@
                         <viewLayoutGuide key="safeArea" id="OR0-Nc-5hh"/>
                     </view>
                     <navigationItem key="navigationItem" id="TCB-DM-Yae">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="1Nx-eP-WGw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1Nx-eP-WGw">
                             <connections>
                                 <segue destination="DrV-PR-D2p" kind="push" id="M8N-AZ-e4Y"/>
                             </connections>
@@ -473,12 +473,12 @@
             </objects>
             <point key="canvasLocation" x="791" y="117"/>
         </scene>
-        <!--Item-->
+        <!--好友-->
         <scene sceneID="OZs-Fa-MCD">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zqp-ct-JzP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G56-ES-1ji" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="a2r-NR-46Y"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G56-ES-1ji" customClass="CustomNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="好友" id="a2r-NR-46Y"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Rn-nB-ty6">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -492,11 +492,11 @@
             </objects>
             <point key="canvasLocation" x="1572.8" y="-61.169415292353825"/>
         </scene>
-        <!--Item-->
+        <!--组-->
         <scene sceneID="Kja-cY-rLq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HZT-yR-Dch" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="x8v-43-UlG"/>
+                    <tabBarItem key="tabBarItem" title="组" id="x8v-43-UlG"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iaK-Ds-4m1">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

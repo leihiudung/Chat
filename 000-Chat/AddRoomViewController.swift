@@ -17,13 +17,15 @@ class AddRoomViewController: UIViewController, XMPPRoomDelegate {
 
     @IBOutlet weak var roomView: UITextField!
     let app = UIApplication.shared.delegate as! AppDelegate
+    var rosterText : String!
     var delegate : RoomQueryDelegate!
     var roster : XMPPRoster!
     var room: XMPPRoom!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationItem.title = "新建/加入聊天室"
+        
         if app.rosterStorage == nil {
             app.rosterStorage = XMPPRosterCoreDataStorage.init()
         }
@@ -42,7 +44,7 @@ class AddRoomViewController: UIViewController, XMPPRoomDelegate {
         if roomView.text == nil {
             return
         }
-        let rosterText = roomView.text!
+        rosterText = roomView.text!
         let jid = XMPPJID.init(string: rosterText + "@" + ROOM_SUFFIX)
         roomView.text = ""
         roster.subscribePresence(toUser: jid)
@@ -56,7 +58,7 @@ class AddRoomViewController: UIViewController, XMPPRoomDelegate {
     }
     
     func addRoom(_ roomName: String) {
-        if room == nil {
+        if app.roomStorage == nil {
             app.roomStorage = XMPPRoomCoreDataStorage.init()
         }
         let roomJid = XMPPJID.init(string: roomName)
@@ -69,6 +71,14 @@ class AddRoomViewController: UIViewController, XMPPRoomDelegate {
     }
     
     func xmppRoomDidCreate(_ sender: XMPPRoom!) {
+//        let field = XMLElement.element(withName: "field") as! XMLElement
+//        field.addAttribute(withName: "type", stringValue: "boolean")
+//        field.addAttribute(withName: "var", stringValue: rosterText  + "@" + ROOM_SUFFIX)
+//        field.addChild(XMLElement.element(withName: "value", stringValue: "1") as! DDXMLNode)
+//        let x = XMLElement.element(withName: "x", stringValue:"jabber:x:data") as! XMLElement
+//        x.addAttribute(withName: "type", stringValue: "form")
+//        x.addChild(field)
+//        sender.configureRoom(usingOptions: x)
         DispatchQueue.main.sync {
             self.navigationController?.popViewController(animated: true)
         };
@@ -82,13 +92,18 @@ class AddRoomViewController: UIViewController, XMPPRoomDelegate {
             viewController.room = room
             self.present(viewController, animated: true, completion: nil)
         };
-        
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            ChatViewController *viewController = (ChatViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"chatViewController"];
-//            [viewController setCurrentSession:_room.roomJID.full];
-//            [viewController setRoomUserSession:_app.stream.myJID.bare];
-//            [viewController setRoom:self.room];
-//            [self presentViewController:viewController animated:YES completion:nil];
-//            });
+
+//        NSXMLElement *field = [NSXMLElementelementWithName:@"field"];
+//        [field addAttributeWithName:@"type"stringValue:@"boolean"];
+//        [field addAttributeWithName:@"var"stringValue:@"muc#roomconfig_persistentroom"];
+//        [field addChild:[NSXMLElementelementWithName:@"value"objectValue:@"1"]];  // 将持久属性置为YES。
+//        NSXMLElement *x = [NSXMLElementelementWithName:@"x"xmlns:@"jabber:x:data"];
+//        [x addAttributeWithName:@"type"stringValue:@"form"];
+//        [x addChild:field];
+//        [sender configureRoomUsingOptions:x];
+    }
+    
+    override func delete(_ sender: Any?) {
+        print("ddd")
     }
 }

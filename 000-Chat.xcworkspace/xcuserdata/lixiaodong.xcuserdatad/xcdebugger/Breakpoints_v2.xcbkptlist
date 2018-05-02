@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "000-Chat/RosterViewController.m"
-            timestampString = "546933750.5276099"
+            filePath = "000-Chat/AddRoomViewController.swift"
+            timestampString = "546943014.586762"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
-            landmarkName = "-xmppRoster:didReceiveRosterItem:"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,62 +25,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "000-Chat/AddRoomViewController.swift"
-            timestampString = "546933750.528093"
+            filePath = "000-Chat/RoomViewController.m"
+            timestampString = "546943023.432507"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "xmppRoomDidCreate(_:)"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "-refreshClick:"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "000-Chat/AddRoomViewController.swift"
-            timestampString = "546933750.528165"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "xmppRoomDidJoin(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "_00_Chat.AddRoomViewController.xmppRoomDidJoin(Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.XMPPRoom&gt;) -&gt; ()"
-                  moduleName = "000-Chat"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lixiaodong/Documents/ios/MyOC/000-Chat/000-Chat/AddRoomViewController.swift"
-                  timestampString = "546933750.953796"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "78"
-                  endingLineNumber = "78"
-                  offsetFromSymbolStart = "28">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in _00_Chat.AddRoomViewController.xmppRoomDidJoin(Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.XMPPRoom&gt;) -&gt; ()"
-                  moduleName = "000-Chat"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lixiaodong/Documents/ios/MyOC/000-Chat/000-Chat/AddRoomViewController.swift"
-                  timestampString = "546933750.955894"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "79"
-                  endingLineNumber = "79"
-                  offsetFromSymbolStart = "20">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
