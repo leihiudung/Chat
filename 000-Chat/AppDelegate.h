@@ -15,6 +15,8 @@
 @end
 
 @protocol RosterDelegate
+
+- (void)presenceSubscription:(XMPPPresence *)xmppRresence;
 - (void)onOrOff:(NSString*)userId isOn:(BOOL) isOn;
 - (void)refresh;
 @end

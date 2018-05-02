@@ -146,6 +146,8 @@
     
 }
 
+    
+    
 // 收到消息
 - (void)xmppStream:(XMPPStream *)sender didReceiveMessage:(XMPPMessage *)message{
     NSString *to = [message attributeStringValueForName:@"to"];

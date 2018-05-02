@@ -31,7 +31,15 @@
     [super loadView];
     self.titleArray = @[@"在线好友", @"离线好友", @"尝试添加的好友"];
     
+#ifdef __IPHONE_11_0
     
+    if (@available(iOS 11.0, *)) {
+        
+    } else {
+        [self setAutomaticallyAdjustsScrollViewInsets:NO];
+    }
+    
+#endif
 }
 
 - (void)viewDidLoad {
@@ -88,6 +96,7 @@
     RosterHeaderView *view = [[NSBundle mainBundle]loadNibNamed:@"RosterHeaderView" owner:nil options:nil].lastObject;
     [view.icon setImage:[UIImage imageNamed:([(NSNumber *)self.status[section] boolValue] ? @"zhan.gif" : @"zhe.gif")]];
     [view setTag:section];
+    [view.label setText:self.titleArray[section]];
     [view addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(display:)]];
 
     return view;
@@ -159,10 +168,6 @@
 
 }
 
-- (void)xmppRoster:(XMPPRoster *)sender didReceivePresenceSubscriptionRequest:(XMPPPresence *)presence{
-    
-}
-
 - (void)xmppRosterDidEndPopulating:(XMPPRoster *)sender{
 //    _offlineUsers = _offlineArray.mutableCopy;
     [self checkOnlineStatus];
@@ -222,6 +227,31 @@
     });
 }
 
+// 收到好友请求时激发该方法
+- (void)xmppRoster:(XMPPRoster *)sender didReceivePresenceSubscriptionRequest:(XMPPPresence *)presence{
+    [self presenceSubscription:presence];
+}
+
+- (void)presenceSubscription:(XMPPPresence *)xmppRresence{
+    NSString *userName = [xmppRresence from].user;
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"TIps" message:[NSString stringWithFormat:@"%@ wannt to be your friend", userName] preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"Sure" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        // 该方法还回再调用- didReceiveRosterItem方法刷新一遍数据
+        [_roster acceptPresenceSubscriptionRequestFrom:[xmppRresence from] andAddToRoster:YES];
+    }];
+    UIAlertAction *rejectAction = [UIAlertAction actionWithTitle:@"Disagree" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        [_roster rejectPresenceSubscriptionRequestFrom:[xmppRresence from]];
+        // 说明见下方 A
+        [_roster removeUser:[xmppRresence from]];
+    }];
+    [alertController addAction:confirmAction];
+    [alertController addAction:rejectAction];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self presentViewController:alertController animated:YES completion:nil];
+        
+    });
+}
+
 - (void)refresh{
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.tableView reloadData];
@@ -231,5 +261,7 @@
 
 - (void)dealloc{
     NSLog(@"done");
+}
+- (IBAction)btnClick:(id)sender {
 }
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3321FEFB2099565B00FE5516 /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3321FEFA2099565B00FE5516 /* AddFriendViewController.swift */; };
+		3321FEFD20997C5500FE5516 /* AddRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3321FEFC20997C5500FE5516 /* AddRoomViewController.swift */; };
 		3347890920931ECE000EDE05 /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3347890820931ECE000EDE05 /* ChatCell.m */; };
 		334805022093F9C800C867F4 /* ToolsMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 334805012093F9C800C867F4 /* ToolsMethod.m */; };
 		3348050420940F4700C867F4 /* crash.wav in Resources */ = {isa = PBXBuildFile; fileRef = 334805032094014F00C867F4 /* crash.wav */; };
@@ -58,6 +60,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3321FEFA2099565B00FE5516 /* AddFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
+		3321FEFC20997C5500FE5516 /* AddRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRoomViewController.swift; sourceTree = "<group>"; };
 		3347890720931ECE000EDE05 /* ChatCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatCell.h; sourceTree = "<group>"; };
 		3347890820931ECE000EDE05 /* ChatCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatCell.m; sourceTree = "<group>"; };
 		334805002093F9C800C867F4 /* ToolsMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolsMethod.h; sourceTree = "<group>"; };
@@ -178,6 +182,8 @@
 				33C67AF52090C69D006BFA33 /* RosterViewController.m */,
 				33C67AF32090ADA8006BFA33 /* Constant.h */,
 				33C67AD5209074DB006BFA33 /* Main.storyboard */,
+				3321FEFA2099565B00FE5516 /* AddFriendViewController.swift */,
+				3321FEFC20997C5500FE5516 /* AddRoomViewController.swift */,
 				3359F0EE2091CC03009578F1 /* ChatViewController.h */,
 				334805052094272700C867F4 /* ChatViewController.m */,
 				3363429B20954A9A002EB9E5 /* EmojiView.h */,
@@ -494,6 +500,7 @@
 				3359F0AC20915BC4009578F1 /* RosterHeader.m in Sources */,
 				334805062094272700C867F4 /* ChatViewController.m in Sources */,
 				33C67AF92090C6AC006BFA33 /* RoomViewController.m in Sources */,
+				3321FEFD20997C5500FE5516 /* AddRoomViewController.swift in Sources */,
 				3347890920931ECE000EDE05 /* ChatCell.m in Sources */,
 				336342A82095619A002EB9E5 /* Emoji.m in Sources */,
 				336342AB209583D5002EB9E5 /* EmojiString.swift in Sources */,
@@ -502,6 +509,7 @@
 				33C67ADF209074DB006BFA33 /* main.m in Sources */,
 				336342B02095BBD6002EB9E5 /* EmojiAttachment.swift in Sources */,
 				334805022093F9C800C867F4 /* ToolsMethod.m in Sources */,
+				3321FEFB2099565B00FE5516 /* AddFriendViewController.swift in Sources */,
 				33C67AD1209074DB006BFA33 /* AppDelegate.m in Sources */,
 				3363429D20954A9A002EB9E5 /* EmojiView.m in Sources */,
 				336342A22095561E002EB9E5 /* EmojiManager.m in Sources */,

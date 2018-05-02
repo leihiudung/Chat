@@ -4,3 +4,6 @@
 
 
 #import "Emoji.h"
+#import "AppDelegate.h"
+#import "ChatViewController.h"
+#import <XMPPFramework/XMPPFramework.h>

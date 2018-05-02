@@ -9,6 +9,7 @@
 #import "RoomViewController.h"
 #import "AppDelegate.h"
 #import "ChatViewController.h"
+#import "_00_Chat-Swift.h"
 
 @interface RoomViewController () <XMPPRoomDelegate, UITableViewDelegate, UITableViewDataSource, RoomDelegate>
 @property (nonatomic, strong) AppDelegate *app;
@@ -17,7 +18,9 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
 
-@implementation RoomViewController
+@implementation RoomViewController{
+    BOOL _needFresh;
+}
 
 - (void)loadView{
     [super loadView];
@@ -37,6 +40,14 @@
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"li"];
     [self getRoomList];
     
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+//    if (_needFresh) {
+        [self.tableView reloadData];
+//        _needFresh = YES;
+//    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -100,12 +111,15 @@
     });
 }
 
+- (void)joinRoom{
+    
+}
+
 - (void)xmppRoomDidCreate:(XMPPRoom *)sender{
     
 }
 
 - (void)xmppRoomDidJoin:(XMPPRoom *)sender{
-    NSLog(@"you in");
     dispatch_async(dispatch_get_main_queue(), ^{
         ChatViewController *viewController = (ChatViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"chatViewController"];
         [viewController setCurrentSession:_room.roomJID.full];
@@ -115,5 +129,6 @@
     });
     
 }
+
 
 @end
