@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RosterHeader">
+            <connections>
+                <outlet property="rosterHeader" destination="rWD-h7-dvj" id="2BA-at-4YN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="rosterHeader111" id="rWD-h7-dvj">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zhe" translatesAutoresizingMaskIntoConstraints="NO" id="TuJ-zP-Tba">
+                    <rect key="frame" x="16" y="32" width="16" height="16"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="headerTitle" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FB4-4K-Mn6">
+                    <rect key="frame" x="40" y="30" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="TuJ-zP-Tba" firstAttribute="leading" secondItem="drX-oh-lVi" secondAttribute="leading" constant="16" id="BJZ-Az-e5X"/>
+                <constraint firstItem="FB4-4K-Mn6" firstAttribute="centerY" secondItem="rWD-h7-dvj" secondAttribute="centerY" id="EQb-Eh-nvM"/>
+                <constraint firstItem="FB4-4K-Mn6" firstAttribute="leading" secondItem="TuJ-zP-Tba" secondAttribute="trailing" constant="8" id="NFD-qa-uWo"/>
+                <constraint firstItem="TuJ-zP-Tba" firstAttribute="centerY" secondItem="rWD-h7-dvj" secondAttribute="centerY" id="bko-eI-F5U"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="drX-oh-lVi"/>
+            <point key="canvasLocation" x="14.5" y="-35"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="zhe" width="16" height="16"/>
+    </resources>
+</document>
